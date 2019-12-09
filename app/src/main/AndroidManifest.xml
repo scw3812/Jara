@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".SleepSettingActivity"
+            android:theme="@style/popupTheme"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".LoadingActivity"
             android:theme="@style/LoadingTheme">
