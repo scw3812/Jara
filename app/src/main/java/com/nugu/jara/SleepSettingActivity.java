@@ -12,7 +12,7 @@ import java.util.List;
 
 public class SleepSettingActivity extends AppCompatActivity {
 
-    private Spinner meridiemSpinner, hourSpinner, minuteSpinner;
+    private Spinner meridiemSleepSpinner, hourSleepSpinner, minuteSleepSpinner, meridiemWakeUpSpinner, hourWakeUpSpinner, minuteWakeUpSpinner;
     private ArrayAdapter meridiemArrayAdapter, hourArrayAdapter, minuteArrayAdapter;
 
     @Override
@@ -20,9 +20,12 @@ public class SleepSettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        meridiemSpinner = (Spinner)findViewById(R.id.meridiem_setting_spinner);
-        hourSpinner = (Spinner)findViewById(R.id.hour_setting_spinner);
-        minuteSpinner = (Spinner)findViewById(R.id.minute_setting_spinner);
+        meridiemSleepSpinner = (Spinner)findViewById(R.id.meridiem_setting_sleep_spinner);
+        hourSleepSpinner = (Spinner)findViewById(R.id.hour_setting_sleep_spinner);
+        minuteSleepSpinner = (Spinner)findViewById(R.id.minute_setting_sleep_spinner);
+        meridiemWakeUpSpinner = (Spinner)findViewById(R.id.meridiem_setting_wakeup_spinner);
+        hourWakeUpSpinner = (Spinner)findViewById(R.id.hour_setting_wakeup_spinner);
+        minuteWakeUpSpinner = (Spinner)findViewById(R.id.minute_setting_wakeup_spinner);
 
         String[] meridiemArray = getResources().getStringArray(R.array.meridiem_array);
         String[] hourArray = getResources().getStringArray(R.array.hour_array);
@@ -35,8 +38,11 @@ public class SleepSettingActivity extends AppCompatActivity {
         hourArrayAdapter =  new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item, hourArray);
         minuteArrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item, minuteArray);
 
-        meridiemSpinner.setAdapter(meridiemArrayAdapter);
-        hourSpinner.setAdapter(hourArrayAdapter);
-        minuteSpinner.setAdapter(minuteArrayAdapter);
+        meridiemSleepSpinner.setAdapter(meridiemArrayAdapter);
+        hourSleepSpinner.setAdapter(hourArrayAdapter);
+        minuteSleepSpinner.setAdapter(minuteArrayAdapter);
+        meridiemWakeUpSpinner.setAdapter(meridiemArrayAdapter);
+        hourWakeUpSpinner.setAdapter(hourArrayAdapter);
+        minuteWakeUpSpinner.setAdapter(minuteArrayAdapter);
     }
 }
