@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SleepSettingActivity"
-            android:theme="@style/popupTheme"></activity>
+            android:theme="@style/popupTheme" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".LoadingActivity"
