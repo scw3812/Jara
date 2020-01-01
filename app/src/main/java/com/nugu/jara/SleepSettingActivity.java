@@ -55,10 +55,17 @@ public class SleepSettingActivity extends AppCompatActivity {
         hourWakeUpSpinner.setAdapter(hourArrayAdapter);
         minuteWakeUpSpinner.setAdapter(minuteArrayAdapter);
 
+        final String meridiemSleep = meridiemArray[meridiemSleepSpinner.getSelectedItemPosition()];
+        final String hourSleep = hourArray[hourSleepSpinner.getSelectedItemPosition()];
+        final String minuteSleep = minuteArray.get(minuteSleepSpinner.getSelectedItemPosition());
+        final String meridiemWakeUp = meridiemArray[meridiemWakeUpSpinner.getSelectedItemPosition()];
+        final String hourWakeUp = hourArray[hourWakeUpSpinner.getSelectedItemPosition()];
+        final String minuteWakeUp = minuteArray.get(minuteWakeUpSpinner.getSelectedItemPosition());
+
         settingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                
             }
         });
     }
