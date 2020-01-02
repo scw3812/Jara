@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -65,7 +66,15 @@ public class SleepSettingActivity extends AppCompatActivity {
         settingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                ImageView lockMode = new ImageView(SleepSettingActivity.this);
+                lockMode.setImageResource(R.mipmap.ic_launcher);
+
+                WindowManager.LayoutParams windowLp = new WindowManager.LayoutParams(WindowManager.LayoutParams.TYPE_BASE_APPLICATION);
+                windowLp.width = WindowManager.LayoutParams.MATCH_PARENT;
+                windowLp.height = WindowManager.LayoutParams.MATCH_PARENT;
+
+                WindowManager windowManager = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+                windowManager.addView(lockMode, windowLp);
             }
         });
     }
