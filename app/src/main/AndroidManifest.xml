@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".WakeUpSettingActivity"
+            android:theme="@style/popupTheme"></activity>
+        <activity
             android:name=".SleepSettingActivity"
             android:theme="@style/popupTheme" />
         <activity android:name=".MainActivity" />
@@ -22,6 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".AlarmReceiver" />
+        <service
+            android:name=".RingtonePlayingService"
+            android:enabled="true"></service>
     </application>
 
 </manifest>
